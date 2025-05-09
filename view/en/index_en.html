@@ -20,25 +20,39 @@
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="brand">Philip Rendon</a>
-      
-      <div class="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <div class="language-selector">
-          <div class="language-option active">
-            <a href="../../index.html">
-                <span class="flag">🇪🇸</span>
-                <span class="lang-name">Spanish</span>
+      <div class="language-dropdown">
+          <a href=""><i class="fas fa-globe"></i></a>
+          <div class="language-options">
+            <a href="./index_en.html" class="language-option active">
+              <span class="flag">🇬🇧</span>
+              <span class="lang-name">English</span>
+            </a>
+            <a href="../../index.html" class="language-option">
+              <span class="flag">🇪🇸</span>
+              <span class="lang-name">Spanish</span>
             </a>
           </div>
         </div>
+      
+      <div class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#education" class="nav-link">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">
+              <i class="fas fa-briefcase"></i>
+            </a>
+          </li>
+        </ul>
+        
       </div>
     </div>
   </nav>
@@ -74,12 +88,12 @@
                 <div class="responsive-iframe">
                   <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p class="text-secondary">A short introduction about myself.</p>
+                <p class="text-secondary">A short introduction about myself and my approach to development.</p>
               </div>
             </div>
           </div>
         </section>
-
+        
         <!-- Skills Section -->
         <section id="skills" class="section animate__animated animate__fadeIn">
           <div class="card">
