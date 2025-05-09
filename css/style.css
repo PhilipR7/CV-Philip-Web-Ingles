@@ -447,6 +447,14 @@
     width: 100%;
   }
 
+  .j23{
+    width: 100%;
+  }
+
+  .sjfep{
+    width: 100%;
+  }
+
   /* Media queries */
   @media (max-width: 991px) {
     .content {
