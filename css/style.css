@@ -1,568 +1,567 @@
-
 /* Base styles and variables */
 :root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --dark-color: #212529;
-  --light-color: #f8f9fa;
-  --light-gray: #e9ecef;
-  --border-color: #dee2e6;
-  --success-color: #198754;
-  --body-bg: #f8f9fa;
-  --card-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-  --card-border: 1px solid rgba(0,0,0,.125);
-  --font-family: 'Poppins', sans-serif;
+  --primary-color: #0d6efd; /* Define el color primario para elementos interactivos como enlaces y botones */
+  --secondary-color: #6c757d; /* Define un color secundario, a menudo usado para texto menos importante o elementos secundarios */
+  --dark-color: #212529; /* Define un color oscuro para el texto principal */
+  --light-color: #f8f9fa; /* Define un color claro para fondos o texto sobre fondos oscuros */
+  --light-gray: #e9ecef; /* Define un tono de gris claro para fondos sutiles o separadores */
+  --border-color: #dee2e6; /* Define el color predeterminado para los bordes de los elementos */
+  --success-color: #198754; /* Define un color para indicar éxito o estados positivos */
+  --body-bg: #f8f9fa; /* Define el color de fondo predeterminado para el cuerpo de la página */
+  --card-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Define una sombra sutil para los elementos tipo tarjeta */
+  --card-border: 1px solid rgba(0,0,0,.125); /* Define un borde ligero para los elementos tipo tarjeta */
+  --font-family: 'Poppins', sans-serif; /* Define la fuente de letra principal a utilizar en la página */
 }
 
 /* Reset and global styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Elimina los márgenes predeterminados de todos los elementos */
+  padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+  box-sizing: border-box; /* Cambia el modelo de caja para incluir el relleno y el borde en el ancho y alto de un elemento */
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--body-bg);
-  color: var(--dark-color);
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: var(--font-family); /* Aplica la fuente de letra definida en la variable --font-family */
+  background-color: var(--body-bg); /* Aplica el color de fondo definido en la variable --body-bg */
+  color: var(--dark-color); /* Aplica el color de texto predeterminado definido en la variable --dark-color */
+  line-height: 1.6; /* Establece la altura de la línea para mejorar la legibilidad del texto */
+  min-height: 100vh; /* Asegura que el cuerpo ocupe al menos la altura completa de la ventana gráfica */
+  display: flex; /* Utiliza Flexbox para el diseño de los elementos hijos */
+  flex-direction: column; /* Organiza los elementos hijos en una columna vertical */
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 100%; /* El contenedor ocupa todo el ancho disponible */
+  max-width: 1200px; /* Establece un ancho máximo para evitar que el contenido se extienda demasiado en pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+  padding: 0 15px; /* Añade un relleno horizontal a los lados del contenedor para evitar que el contenido toque los bordes */
 }
 
 a {
-  color: var(--primary-color);
-  text-decoration: none;
+  color: var(--primary-color); /* Aplica el color primario a los enlaces */
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Muestra un subrayado en los enlaces al pasar el ratón por encima */
 }
 
 .main-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 1; /* Permite que este contenedor crezca para ocupar el espacio vertical restante en el body (cuando el body usa flex) */
+  display: flex; /* Utiliza Flexbox para el diseño de los elementos hijos */
+  flex-direction: column; /* Organiza los elementos hijos en una columna vertical */
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  line-height: 1.2;
+  margin-bottom: 0.5rem; /* Añade un margen inferior a los encabezados para separarlos del texto siguiente */
+  font-weight: 600; /* Establece una fuente más gruesa para los encabezados */
+  line-height: 1.2; /* Establece una altura de línea más ajustada para los encabezados */
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Define el tamaño de la fuente para el encabezado de nivel 1 */
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2rem; /* Define el tamaño de la fuente para el encabezado de nivel 2 */
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Define el tamaño de la fuente para el encabezado de nivel 3 */
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Añade un margen inferior a los párrafos para separarlos */
 }
 
 /* Navbar styles */
 .navbar {
-  background-color: black;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 0.5rem 0;
+  background-color: black; /* Establece el color de fondo de la barra de navegación a negro */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra suave debajo de la barra de navegación */
+  position: sticky; /* Fija la barra de navegación en la parte superior de la ventana gráfica mientras el usuario se desplaza */
+  top: 0; /* Asegura que la barra de navegación se pegue a la parte superior */
+  z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos en la página */
+  padding: 0.5rem 0; /* Añade un relleno vertical a la barra de navegación */
 }
 
 i{
-  color: white;
+  color: white; /* Establece el color de los iconos (probablemente de una biblioteca de iconos) a blanco */
 }
 
 .navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 15px;
-  flex-wrap: wrap;
+  display: flex; /* Utiliza Flexbox para organizar los elementos dentro del contenedor de la barra de navegación */
+  align-items: center; /* Alinea verticalmente los elementos dentro del contenedor al centro */
+  justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos, empujando el primero a la izquierda y el último a la derecha */
+  padding: 0.5rem 15px; /* Añade un relleno vertical y horizontal al contenedor dentro de la barra de navegación */
+  flex-wrap: wrap; /* Permite que los elementos dentro del contenedor se envuelvan a la siguiente línea si no hay suficiente espacio */
 }
 
 .brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  text-decoration: none;
+  font-size: 1.5rem; /* Establece el tamaño de la fuente para el logo o nombre de la marca */
+  font-weight: 700; /* Establece un grosor de fuente más fuerte para el logo o nombre de la marca */
+  color: var(--primary-color); /* Aplica el color primario definido en las variables CSS */
+  text-decoration: none; /* Elimina cualquier decoración de texto, como el subrayado, del logo o nombre de la marca (especialmente si es un enlace) */
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex; /* Utiliza Flexbox para organizar los elementos del menú de navegación */
+  align-items: center; /* Alinea verticalmente los elementos del menú al centro */
+  justify-content: center; /* Centra horizontalmente los elementos del menú */
+  flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan a la siguiente línea en pantallas más pequeñas */
 }
 
 .nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; /* Utiliza Flexbox para organizar los elementos de la lista de navegación */
+  list-style: none; /* Elimina los marcadores de lista predeterminados */
+  margin: 0; /* Elimina cualquier margen predeterminado de la lista */
+  flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan a la siguiente línea en pantallas más pequeñas */
+  justify-content: center; /* Centra horizontalmente los elementos de la lista */
 }
 
 .nav-item {
-  margin: 0 0.5rem;
+  margin: 0 0.5rem; /* Añade un margen horizontal a cada elemento de la lista de navegación para separarlos */
 }
 
 .nav-link {
-  color: var(--dark-color);
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-size: 1.2rem;
+  color: var(--dark-color); /* Aplica el color de texto oscuro definido en las variables CSS a los enlaces de navegación */
+  padding: 0.5rem; /* Añade un relleno alrededor del texto del enlace para hacerlo más fácil de interactuar */
+  display: flex; /* Utiliza Flexbox para alinear el texto y los posibles iconos dentro del enlace */
+  align-items: center; /* Alinea verticalmente el texto y los iconos dentro del enlace al centro */
+  justify-content: center; /* Centra horizontalmente el texto y los iconos dentro del enlace */
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces de navegación */
+  transition: color 0.3s; /* Añade una transición suave para el cambio de color al pasar el ratón */
+  font-size: 1.2rem; /* Establece un tamaño de fuente ligeramente más grande para los enlaces de navegación */
 }
 
 .nav-link i {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Establece el mismo tamaño de fuente que el texto del enlace para los iconos dentro de los enlaces de navegación */
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
-  text-decoration: none;
+  color: var(--primary-color); /* Cambia el color del texto del enlace al color primario al pasar el ratón */
+  text-decoration: none; /* Asegura que no aparezca subrayado al pasar el ratón (ya que se eliminó el predeterminado) */
 }
 
 /* Language dropdown - CSS only solution */
 .language-dropdown {
-  position: relative;
-  margin-left: 1rem;
+  position: relative; /* Establece el contexto de posicionamiento para los elementos hijos (el menú desplegable) */
+  margin-left: 1rem; /* Añade un margen a la izquierda del menú desplegable para separarlo de otros elementos de navegación */
 }
 
 .selected-language {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: white;
-  border: 1px solid var(--border-color);
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar que es interactivo */
+  display: flex; /* Utiliza Flexbox para alinear la bandera y el texto del idioma */
+  align-items: center; /* Alinea verticalmente la bandera y el texto del idioma al centro */
+  padding: 0.5rem 0.75rem; /* Añade un relleno alrededor del idioma seleccionado */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  background-color: white; /* Establece el color de fondo del idioma seleccionado a blanco */
+  border: 1px solid var(--border-color); /* Añade un borde delgado utilizando el color de borde definido */
 }
 
 .language-options {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 1000;
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  min-width: 120px;
-  display: none;
+  position: absolute; /* Posiciona el menú de opciones de idioma relativamente al elemento padre (.language-dropdown) */
+  top: 100%; /* Coloca el menú justo debajo del elemento .selected-language */
+  right: 0; /* Alinea el menú desplegable a la derecha del elemento .selected-language */
+  z-index: 1000; /* Asegura que el menú desplegable esté por encima de otros elementos */
+  background-color: white; /* Establece el color de fondo del menú de opciones a blanco */
+  border: 1px solid var(--border-color); /* Añade un borde delgado utilizando el color de borde definido */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Añade una sombra suave al menú desplegable */
+  min-width: 120px; /* Establece un ancho mínimo para el menú desplegable */
+  display: none; /* Oculta el menú desplegable de forma predeterminada */
 }
 
 .language-dropdown:hover .language-options {
-  display: block;
+  display: block; /* Muestra el menú desplegable cuando se pasa el ratón por encima del contenedor .language-dropdown */
 }
 
 .language-option {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  text-decoration: none;
-  color: var(--dark-color);
+  display: flex; /* Utiliza Flexbox para alinear la bandera y el texto de cada opción de idioma */
+  align-items: center; /* Alinea verticalmente la bandera y el texto al centro */
+  padding: 0.5rem 0.75rem; /* Añade un relleno alrededor de cada opción de idioma */
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces de las opciones de idioma */
+  color: var(--dark-color); /* Aplica el color de texto oscuro a las opciones de idioma */
 }
 
 .language-option:hover {
-  background-color: var(--light-gray);
-  text-decoration: none;
+  background-color: var(--light-gray); /* Cambia el color de fondo de la opción al pasar el ratón */
+  text-decoration: none; /* Asegura que no aparezca subrayado al pasar el ratón */
 }
 
 .language-option.active {
-  background-color: var(--light-gray);
+  background-color: var(--light-gray); /* Aplica un color de fondo diferente para indicar la opción de idioma activa */
 }
 
 .language-option .flag {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem; /* Añade un margen a la derecha de la bandera para separarla del texto del idioma */
 }
 
 /* Header styles */
 .header {
-  background-color: white;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
-  box-shadow: var(--card-shadow);
+  background-color: white; /* Establece el color de fondo del encabezado a blanco */
+  padding: 2rem 0; /* Añade un relleno vertical de 2 rem arriba y abajo del encabezado */
+  margin-bottom: 2rem; /* Añade un margen inferior de 2 rem al encabezado para separarlo del contenido siguiente */
+  box-shadow: var(--card-shadow); /* Aplica la sombra definida en la variable --card-shadow al encabezado */
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
+  display: flex; /* Utiliza Flexbox para organizar los elementos dentro del encabezado */
+  align-items: center; /* Alinea verticalmente los elementos del encabezado al centro */
 }
 
 .avatar {
-  background-color: var(--light-gray);
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 2rem;
-  flex-shrink: 0;
+  background-color: var(--light-gray); /* Establece el color de fondo del contenedor del avatar a gris claro */
+  width: 100px; /* Establece el ancho del contenedor del avatar a 100 píxeles */
+  height: 100px; /* Establece la altura del contenedor del avatar a 100 píxeles */
+  display: flex; /* Utiliza Flexbox para centrar el icono dentro del avatar */
+  align-items: center; /* Alinea verticalmente el icono dentro del avatar al centro */
+  justify-content: center; /* Centra horizontalmente el icono dentro del avatar */
+  border-radius: 50%; /* Crea una forma circular para el avatar */
+  margin-right: 2rem; /* Añade un margen a la derecha del avatar para separarlo del texto */
+  flex-shrink: 0; /* Evita que el avatar se encoja si el espacio es limitado */
 }
 
 .avatar i {
-  font-size: 3rem;
-  color: var(--primary-color);
+  font-size: 3rem; /* Establece el tamaño del icono dentro del avatar a 3 rem */
+  color: var(--primary-color); /* Aplica el color primario al icono del avatar */
 }
 
 .header-text {
-  flex-grow: 1;
+  flex-grow: 1; /* Permite que el texto del encabezado crezca para ocupar el espacio disponible */
 }
 
 .header-text h1 {
-  margin-bottom: 0.5rem;
-  color: var(--dark-color);
+  margin-bottom: 0.5rem; /* Añade un margen inferior al título principal del encabezado */
+  color: var(--dark-color); /* Aplica el color de texto oscuro al título principal */
 }
 
 .header-text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-  font-weight: 500;
+  font-size: 1.5rem; /* Establece el tamaño de la fuente para el subtítulo del encabezado */
+  margin-bottom: 1rem; /* Añade un margen inferior al subtítulo */
+  color: var(--primary-color); /* Aplica el color primario al subtítulo */
+  font-weight: 500; /* Establece un grosor de fuente ligeramente más ligero para el subtítulo */
 }
 
 .summary {
-  color: var(--secondary-color);
-  font-size: 1.1rem;
-  margin-bottom: 0;
+  color: var(--secondary-color); /* Aplica el color secundario al texto del resumen */
+  font-size: 1.1rem; /* Establece un tamaño de fuente ligeramente más grande para el resumen */
+  margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo del resumen */
 }
 
 /* Section styles */
 .section {
-  margin-bottom: 2rem;
-  animation-duration: 1s;
+  margin-bottom: 2rem; /* Añade un margen inferior de 2 rem a cada sección para separarlas */
+  animation-duration: 1s; /* Define una duración de animación predeterminada de 1 segundo (aunque no se especifica la animación aquí) */
 }
 
 .card {
-  background-color: white;
-  border-radius: 0.25rem;
-  border: var(--card-border);
-  box-shadow: var(--card-shadow);
-  overflow: hidden;
+  background-color: white; /* Establece el color de fondo de la tarjeta a blanco */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  border: var(--card-border); /* Aplica el borde definido en la variable --card-border a la tarjeta */
+  box-shadow: var(--card-shadow); /* Aplica la sombra definida en la variable --card-shadow a la tarjeta */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde de los límites de la tarjeta */
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Añade un relleno de 1.5 rem alrededor del contenido dentro del cuerpo de la tarjeta */
 }
 
 .section-title {
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  border-bottom: 1px solid var(--border-color); /* Añade una línea de borde inferior utilizando el color de borde definido para el título de la sección */
+  padding-bottom: 0.5rem; /* Añade un relleno inferior al título de la sección para separarlo del borde */
+  margin-bottom: 1rem; /* Añade un margen inferior al título de la sección para separarlo del contenido siguiente */
+  font-weight: 600; /* Establece una fuente más gruesa para el título de la sección */
 }
 
 .section-subtitle {
-  color: var(--secondary-color);
-  font-size: 0.9rem;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
+  color: var(--secondary-color); /* Aplica el color secundario al subtítulo de la sección */
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para el subtítulo de la sección */
+  margin-top: -0.5rem; /* Añade un margen superior negativo para acercar el subtítulo al título */
+  margin-bottom: 1rem; /* Añade un margen inferior al subtítulo para separarlo del contenido siguiente */
 }
 
 /* Items styling (Education & Experience) */
 .items-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Añade un margen inferior al contenedor de los elementos de educación y experiencia */
 }
 
 .education-item, .experience-item {
-  display: flex;
-  margin-bottom: 1.5rem;
+  display: flex; /* Utiliza Flexbox para organizar los elementos de cada item (icono y texto) */
+  margin-bottom: 1.5rem; /* Añade un margen inferior a cada item de educación y experiencia para separarlos */
 }
 
 .icon-container {
-  background-color: var(--light-gray);
-  width: 40px;
-  height: 40px;
-  border-radius: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1rem;
-  flex-shrink: 0;
+  background-color: var(--light-gray); /* Establece el color de fondo del contenedor del icono a gris claro */
+  width: 40px; /* Establece el ancho del contenedor del icono a 40 píxeles */
+  height: 40px; /* Establece la altura del contenedor del icono a 40 píxeles */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  display: flex; /* Utiliza Flexbox para centrar el icono dentro del contenedor */
+  align-items: center; /* Alinea verticalmente el icono al centro */
+  justify-content: center; /* Centra horizontalmente el icono */
+  margin-right: 1rem; /* Añade un margen a la derecha del contenedor del icono para separarlo del texto */
+  flex-shrink: 0; /* Evita que el contenedor del icono se encoja si el espacio es limitado */
 }
 
 .icon-container i {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Aplica el color primario a los iconos dentro de los contenedores de iconos */
 }
 
 .content {
-  flex-grow: 1;
+  flex-grow: 1; /* Permite que el contenido de los items (educación, experiencia) crezca para ocupar el espacio disponible */
 }
 
 .content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  color: var(--dark-color);
+  font-size: 1.1rem; /* Establece el tamaño de la fuente para los títulos dentro del contenido de los items */
+  margin-bottom: 0.25rem; /* Añade un pequeño margen inferior a los títulos */
+  color: var(--dark-color); /* Aplica el color de texto oscuro a los títulos */
 }
 
 .item-meta {
-  display: flex;
-  flex-direction: column;
-  color: var(--secondary-color);
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  display: flex; /* Utiliza Flexbox para organizar la información meta del item (institución/empresa, periodo) */
+  flex-direction: column; /* Organiza los elementos meta en una columna vertical */
+  color: var(--secondary-color); /* Aplica el color secundario al texto meta */
+  margin-bottom: 0.5rem; /* Añade un pequeño margen inferior a la información meta */
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para la información meta */
 }
 
 .institution, .company {
-  font-weight: 500;
+  font-weight: 500; /* Establece una fuente ligeramente más gruesa para el nombre de la institución o empresa */
 }
 
 .period {
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* Establece un tamaño de fuente aún más pequeño para el periodo de tiempo */
 }
 
 .content p {
-  font-size: 0.9rem;
-  color: var(--secondary-color);
-  margin-bottom: 0;
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para los párrafos dentro del contenido del item */
+  color: var(--secondary-color); /* Aplica el color secundario a los párrafos */
+  margin-bottom: 0; /* Elimina el margen inferior predeterminado de los párrafos */
 }
 
 /* Video & Map containers */
 .video-container, .map-container {
-  background-color: white;
-  padding: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 0.25rem;
-  margin-top: 1.5rem;
+  background-color: white; /* Establece el color de fondo de los contenedores de video y mapa a blanco */
+  padding: 1rem; /* Añade un relleno de 1 rem dentro de los contenedores */
+  border: 1px solid var(--border-color); /* Añade un borde delgado utilizando el color de borde definido */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  margin-top: 1.5rem; /* Añade un margen superior para separar estos contenedores de otros elementos */
 }
 
 .video-container h3, .map-container h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem; /* Establece el tamaño de la fuente para los títulos dentro de los contenedores de video y mapa */
+  margin-bottom: 1rem; /* Añade un margen inferior a los títulos */
 }
 
 .responsive-iframe {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  position: relative; /* Establece el contexto de posicionamiento para el iframe */
+  padding-bottom: 56.25%; /* Establece un relleno inferior basado en la relación de aspecto 16:9 para mantener la proporción del iframe */
+  height: 0; /* Establece la altura inicial a 0 */
+  overflow: hidden; /* Oculta cualquier parte del iframe que se desborde del contenedor */
+  margin-bottom: 1rem; /* Añade un margen inferior al contenedor del iframe */
 }
 
 .responsive-iframe iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute; /* Posiciona el iframe absolutamente dentro de su contenedor relativo */
+  top: 0; /* Alinea la parte superior del iframe con la parte superior del contenedor */
+  left: 0; /* Alinea el lado izquierdo del iframe con el lado izquierdo del contenedor */
+  width: 100%; /* Hace que el iframe ocupe el 100% del ancho de su contenedor */
+  height: 100%; /* Hace que el iframe ocupe el 100% de la altura de su contenedor */
 }
 
 .text-secondary {
-  color: var(--secondary-color);
-  font-size: 0.9rem;
+  color: var(--secondary-color); /* Aplica el color secundario al texto con esta clase */
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para el texto con esta clase */
 }
 
 /* Skills section */
 .skills-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Añade un margen inferior a cada grupo de habilidades */
 }
 
 .skills-category-title {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: var(--dark-color);
+  font-size: 1.1rem; /* Establece el tamaño de la fuente para el título de la categoría de habilidades */
+  margin-bottom: 1rem; /* Añade un margen inferior al título de la categoría */
+  color: var(--dark-color); /* Aplica el color de texto oscuro al título de la categoría */
 }
 
 .skill-bar {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Añade un margen inferior a cada barra de habilidad */
 }
 
 .skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  display: flex; /* Utiliza Flexbox para alinear la etiqueta de la habilidad y el porcentaje */
+  justify-content: space-between; /* Distribuye el espacio entre la etiqueta y el porcentaje */
+  margin-bottom: 0.5rem; /* Añade un pequeño margen inferior a la información de la habilidad */
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para la información de la habilidad */
 }
 
 .skill-name {
-  font-weight: 500;
-  color: var(--dark-color);
+  font-weight: 500; /* Establece una fuente ligeramente más gruesa para el nombre de la habilidad */
+  color: var(--dark-color); /* Aplica el color de texto oscuro al nombre de la habilidad */
 }
 
 .skill-percentage {
-  color: var(--secondary-color);
-  font-weight: 500;
+  color: var(--secondary-color); /* Aplica el color secundario al porcentaje de la habilidad */
+  font-weight: 500; /* Establece una fuente ligeramente más gruesa para el porcentaje */
 }
 
 .progress-container {
-  height: 0.5rem;
-  background-color: var(--light-gray);
-  border-radius: 0.25rem;
-  overflow: hidden;
+  height: 0.5rem; /* Establece la altura del contenedor de la barra de progreso */
+  background-color: var(--light-gray); /* Establece el color de fondo del contenedor a gris claro */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para esquinas ligeramente redondeadas */
+  overflow: hidden; /* Oculta cualquier parte de la barra de progreso que se extienda fuera del contenedor */
 }
 
 .progress-bar {
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 0.25rem;
-  transition: width 1s ease-out;
+  height: 100%; /* Asegura que la barra de progreso ocupe toda la altura del contenedor */
+  background-color: var(--primary-color); /* Establece el color de la barra de progreso al color primario */
+  border-radius: 0.25rem; /* Añade un pequeño radio de borde para que coincida con el contenedor */
+  transition: width 1s ease-out; /* Añade una transición suave para el cambio de ancho (animación) */
 }
 
 /* Contact section */
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: flex; /* Utiliza Flexbox para organizar la información de contacto */
+  flex-direction: column; /* Organiza los elementos de contacto en una columna vertical */
+  gap: 1rem; /* Añade un espacio de 1 rem entre los elementos de contacto */
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  display: flex; /* Utiliza Flexbox para alinear el icono y el texto de cada item de contacto */
+  align-items: center; /* Alinea verticalmente el icono y el texto al centro */
+  gap: 0.75rem; /* Añade un espacio de 0.75 rem entre el icono y el texto */
 }
 
 .contact-item i {
-  color: var(--primary-color);
-  width: 16px;
+  color: var(--primary-color); /* Aplica el color primario a los iconos de contacto */
+  width: 16px; /* Establece el ancho de los iconos de contacto a 16 píxeles */
 }
 
 /* Footer styles */
 .footer {
-  background-color: var(--dark-color);
-  color: white;
-  padding: 2rem 0;
-  margin-top: 3rem;
+  background-color: var(--dark-color); /* Establece el color de fondo del pie de página al color oscuro */
+  color: white; /* Establece el color del texto del pie de página a blanco */
+  padding: 2rem 0; /* Añade un relleno vertical de 2 rem arriba y abajo del pie de página */
+  margin-top: 3rem; /* Añade un margen superior de 3 rem al pie de página para separarlo del contenido principal */
 }
 
 .footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Utiliza Flexbox para organizar los elementos dentro del pie de página */
+  align-items: center; /* Alinea verticalmente los elementos del pie de página al centro */
+  justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos del pie de página */
 }
 
 .footer-copyright p {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo de copyright */
 }
 
 .footer-social {
-  display: flex;
-  gap: 1rem;
+  display: flex; /* Utiliza Flexbox para organizar los iconos sociales */
+  gap: 1rem; /* Añade un espacio de 1 rem entre los iconos sociales */
 }
 
 .social-icon {
-  color: white;
-  transition: opacity 0.3s;
+  color: white; /* Establece el color de los iconos sociales a blanco */
+  transition: opacity 0.3s; /* Añade una transición suave para el cambio de opacidad al pasar el ratón */
 }
 
 .social-icon:hover {
-  opacity: 0.8;
-  text-decoration: none;
+  opacity: 0.8; /* Reduce ligeramente la opacidad del icono al pasar el ratón */
+  text-decoration: none; /* Asegura que no aparezca subrayado al pasar el ratón (si el icono es un enlace) */
 }
 
 .footer-links {
-  display: flex;
-  gap: 1.5rem;
+  display: flex; /* Utiliza Flexbox para organizar los enlaces del pie de página */
+  gap: 1.5rem; /* Añade un espacio de 1.5 rem entre los enlaces */
 }
 
 .footer-links a {
-  color: white;
-  font-size: 0.9rem;
-  transition: opacity 0.3s;
+  color: white; /* Establece el color de los enlaces del pie de página a blanco */
+  font-size: 0.9rem; /* Establece un tamaño de fuente más pequeño para los enlaces del pie de página */
+  transition: opacity 0.3s; /* Añade una transición suave para el cambio de opacidad al pasar el ratón */
 }
 
 .footer-links a:hover {
-  opacity: 0.8;
-  text-decoration: none;
+  opacity: 0.8; /* Reduce ligeramente la opacidad del enlace al pasar el ratón */
+  text-decoration: none; /* Asegura que no aparezca subrayado al pasar el ratón */
 }
 
 .clot{
-    width: 100%;
-  }
-  
-  .canbuigas{
-    width: 100%;
-  }
+  width: 100%; /* Establece el ancho del elemento con la clase "clot" al 100% de su contenedor */
+}
 
-  .j23{
-    width: 100%;
-  }
+.canbuigas{
+  width: 100%; /* Establece el ancho del elemento con la clase "canbuigas" al 100% de su contenedor */
+}
 
-  .sjfep{
-    width: 100%;
-  }
+.j23{
+  width: 100%; /* Establece el ancho del elemento con la clase "j23" al 100% de su contenedor */
+}
 
-  .yo{
-    width: 160px;
-    height: 140px;
-  }
+ .sjfep {
+  width: 100%; /* Establece el ancho del elemento con la clase "sjfep" al 100% de su contenedor */
+}
+
+.yo {
+  width: 160px; /* Establece el ancho del elemento con la clase "yo" a 160 píxeles */
+  height: 140px; /* Establece la altura del elemento con la clase "yo" a 140 píxeles */
+}
 
 /* Media queries */
 @media (max-width: 991px) {
   .content {
-    max-width: 720px;
+    max-width: 720px; /* En pantallas de hasta 991px de ancho, establece un ancho máximo para el contenido y lo centra */
     margin: 0 auto;
   }
 }
 
 @media (max-width: 767px) {
   .header-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* En pantallas de hasta 767px de ancho, organiza los elementos del encabezado en una columna vertical */
+    text-align: center; /* Centra el texto dentro del encabezado */
   }
-  
+
   .avatar {
-    margin-right: 0;
-    margin-bottom: 1rem;
+    margin-right: 0; /* Elimina el margen derecho del avatar */
+    margin-bottom: 1rem; /* Añade un margen inferior al avatar para separarlo del texto */
   }
-  
+
   .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    flex-direction: column; /* En pantallas de hasta 767px de ancho, organiza los elementos del pie de página en una columna vertical */
+    text-align: center; /* Centra el texto dentro del pie de página */
+    gap: 1rem; /* Añade un espacio de 1 rem entre los elementos del pie de página */
   }
 }
 
 @media (max-width: 576px) {
 
-  
+
   .language-dropdown {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0; /* En pantallas de hasta 576px de ancho, añade un margen vertical al menú desplegable de idioma */
   }
-  
+
   .item-meta {
-    flex-direction: column;
+    flex-direction: column; /* En pantallas de hasta 576px de ancho, organiza la información meta del item en una columna vertical */
   }
-  
+
   .education-item, .experience-item {
-    align-items: flex-start;
+    align-items: flex-start; /* En pantallas de hasta 576px de ancho, alinea los items de educación y experiencia al inicio (izquierda) */
   }
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Al inicio de la animación, el elemento es completamente transparente */
+    transform: translateY(20px); /* Al inicio, el elemento está ligeramente desplazado hacia abajo */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Al final de la animación, el elemento es completamente visible */
+    transform: translateY(0); /* Al final, el elemento vuelve a su posición original */
   }
 }
 
 .animate__fadeIn {
-  animation-name: fadeIn;
+  animation-name: fadeIn; /* Aplica la animación "fadeIn" a los elementos con esta clase */
 }
